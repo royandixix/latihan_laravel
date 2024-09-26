@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route untuk halaman Home
 Route::get('/home', function () {
     return view('home', [
         'title' => 'Home'
@@ -69,16 +70,24 @@ Route::get('/posts/{slug}', function ($slug) {
         ],
     ];
 
-    $post = collect($blog_posts)->firstWhere('slug', $slug);
-
-    if (!$post) {
-        abort(404);
+    $new_post = null; // Set awal menjadi null
+    foreach ($blog_posts as $post) {
+        if ($post['slug'] === $slug) {
+            $new_post = $post;
+            break; // Keluar dari loop setelah menemukan post yang sesuai
+        }
     }
 
-    return view('post', [
-        'title' => $post['title'],
-        'post' => $post
-    ]);
+    // Pastikan $new_post ditemukan sebelum digunakan
+    if ($new_post) {
+        return view('post', [
+            'title' => $new_post['title'], // Menggunakan $new_post
+            'post' => $new_post
+        ]);
+    } else {
+        // Jika post tidak ditemukan, bisa mengembalikan halaman 404 atau error
+        abort(404);
+    }
 });
 
 // Route untuk halaman Login
