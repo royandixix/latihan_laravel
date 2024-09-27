@@ -96,3 +96,10 @@ Route::get('/login', function () {
         'title' => 'Login'
     ]);
 });
+
+// Route untuk halaman Logout
+Route::get('/logout', function () {
+    return view('logout', [
+        'title' => 'halaman keluar'
+    ]);
+});

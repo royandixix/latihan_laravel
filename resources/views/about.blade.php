@@ -7,5 +7,5 @@
     <p>Email: {{ $email }}</p>
     
     <!-- Menampilkan gambar dengan menggunakan helper asset -->
-    <img src="{{ asset('img/' . $img) }}" alt="Gambar Profil" width="200">
+    <img src="{{ asset('img/' . $img) }}" alt="Gambar Profil" width="200" class="img-thumbanil rounded-circle" >
 @endsection
