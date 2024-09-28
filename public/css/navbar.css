@@ -1,3 +1,7 @@
+body {
+    padding-top: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+
 /* Navbar Styles */
 .navbar {
     transition: background-color 0.3s ease;

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm fixed-top">
   <div class="container">
       <a class="navbar-brand fw-bold text-white" href="/">Royandi Web</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
                   <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === 'Blog') ? 'active' : '' }}" href="/blog">Blog</a>
+                  <a class="nav-link {{ ($title === 'Blog') ? 'active' : '' }}" href="/blog">Blog</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link {{ ($title === 'Aritmatika') ? 'active' : '' }}" href="/aritmatika">Logika</a>
