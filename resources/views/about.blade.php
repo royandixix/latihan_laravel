@@ -1,11 +1,10 @@
-@extends('layouts.main') <!-- pastikan layout merujuk ke direktori yang benar -->
+   @extends('layouts.main') 
 
-@section('container')
-    <h1>Halaman About</h1>
-    
-    <h2>Nama: {{ $name }}</h2>
-    <p>Email: {{ $email }}</p>
-    
-    <!-- Menampilkan gambar dengan menggunakan helper asset -->
-    <img src="{{ asset('img/' . $img) }}" alt="Gambar Profil" width="200" class="img-thumbanil rounded-circle" >
-@endsection
+   @section('container')
+   <h1>{{ $nama }}</h1>
+   <h3>{{ $email }}</h3>
+   <p>{{ $image }}</p>
+   <img src="img/black.jpg" alt="royandi gaming" style="width: 500px">
+   @endsection
+
+   

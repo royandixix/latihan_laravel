@@ -1,29 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="/home">SemuahBisaNgoding</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm">
+  <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="/">Royandi Web</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link {{ ($title == 'Home') ? 'active' : '' }}" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {{ ($title == 'About') ? 'active' : '' }}" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {{ ($title == 'Posts') ? 'active' : '' }}" href="/blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {{ ($title == 'Logout') ? 'active' : '' }}" href="/logout">Keluar</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login User</a>
-          </li>
-        </ul>
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link {{ ($title === 'Home') ? 'active' : '' }}" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ ($title === 'Blog') ? 'active' : '' }}" href="/blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link {{ ($title === 'Aritmatika') ? 'active' : '' }}" href="/aritmatika">Logika</a>
+              </li>
+          </ul>
       </div>
-    </div>
-  </nav>
+  </div>
+</nav>

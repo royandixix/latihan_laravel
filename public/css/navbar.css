@@ -1,0 +1,27 @@
+/* Navbar Styles */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #007bff; /* Ganti dengan warna sesuai keinginan */
+}
+
+.nav-link {
+    font-size: 16px; /* Ukuran teks */
+    color: #ffffff; /* Warna teks */
+    transition: color 0.3s ease; /* Transisi warna saat hover */
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Warna saat hover */
+}
+
+.nav-link.active {
+    font-weight: bold; /* Tebal untuk item aktif */
+    border-bottom: 2px solid #ffd700; /* Garis bawah untuk item aktif */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Ukuran teks merek */
+}
