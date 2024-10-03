@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+
+use function PHPSTORM_META\map;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,46 +33,13 @@ Route::get('/about', function () {
 });
 
 // Route untuk menampilkan semua post
-Route::get('/posts', function () {
-    return view('posts', [
-        "title" => "Posts",
-        "posts" =>  Post::all()
-    ]);
-});
-
+Route::get('/posts', [PostController::class, 'index']);
 // Route untuk menampilkan post berdasarkan slug
-Route::get('/posts/{slug}', function ($slug) {
-    $posts = [
-        [
-            "title" => "judul Post Pertama",
-            "slug" => "judul-post-prtama",
-            "author" => "Royandi",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laboriosam necessitatibus tenetur doloremque! Soluta fuga delectus, veritatis excepturi aut quasi dolore eligendi quam ipsa optio illo inventore sit a! Est?"
-        ],
-        [
-            "title" => "judul Post Kedua",
-            "slug" => "judul-post-kedua",
-            "author" => "Roy",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laboriosam necessitatibus tenetur doloremque! Soluta fuga delectus, veritatis excepturi aut quasi dolore eligendi quam ipsa optio illo inventore sit a! Est?"
-        ]
-    ];
-
-    $new_post = [];
-    foreach ($posts as $post) {
-        if ($post["slug"] === $slug) {
-            $new_post = $post;
-        }
-    }
-
-    return view('post', [
-        "title" => "Single Post",
-        "post" => $new_post
-    ]);
-});
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 // Route untuk operasi aritmatika sederhana
 Route::get('/aritmatika', function () {
-    $a = 10;
+    $a = 10;    
     $b = 20;
 
     // Contoh operasi aritmatika
@@ -88,3 +58,5 @@ Route::get('/aritmatika', function () {
         'quotient' => $quotient
     ]);
 });
+
+
