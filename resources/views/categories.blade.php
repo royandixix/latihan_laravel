@@ -11,6 +11,7 @@
                 {{-- <h5>By : {{ $post['author'] }}</h5> --}}
                 {{-- <p>{{ $category->body }}</p> --}}
             </li>
+            
         </ul>
     @endforeach
 @endsection
