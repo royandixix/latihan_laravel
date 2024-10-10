@@ -8,8 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    // protected $fillable = ['title', 'excerpt', 'body'];
+
+    // Menggunakan guarded untuk melindungi kolom id dari mass assignment
     protected $guarded = ['id'];
+
+    // Mendefinisikan relasi ke model Category
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
 }
-
-
+    
